@@ -1,0 +1,13 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+  margin: 0;
+  font-family: sans-serif;
+}
+#map {
+  width: 100%;
+  height: 400px;
+}
+#toggleLayerButton {
+  margin-top: 10px;
+}
