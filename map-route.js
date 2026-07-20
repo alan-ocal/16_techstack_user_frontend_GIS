@@ -47,7 +47,14 @@ const map = new Map({
     }),
   ],
 });
-
+/*
+fetch() is asynchronous.
+1- fetch() starts an HTTP request and immediately returns a Promise.
+2- JavaScript continues executing the rest of your code without waiting for the request to finish.
+3- When the response arrives, the first .then() callback is executed.
+4- response.json() is also asynchronous—it returns another Promise because parsing may take time.
+5- When the JSON has been parsed, the second .then() callback runs with the parsed object.
+*/
 fetch('data/polyline/route.json')
   .then((response) => response.json())
   .then((data) => {
